@@ -1,0 +1,45 @@
+<div class= "row">
+	<div class= "col-md-3 col-md-offset-5">
+		<% if @user.errors.any? %>
+			<ul>
+				<% @entry.errors.full_messages.each do |error_msg| %>
+				<li><%= error_msg %></li>
+				<% end %>
+			</ul>
+		<% end %>
+
+		<%= form_for @user do |f| %>
+			<%= f.label :name %>
+			<%= f.text_field :name, class: "form-control" %>
+			<br />
+			<%= f.label :email %>
+			<%= f.email_field :email, class: "form-control" %>
+			<br />
+			<%= f.label :photo %>
+			<%= f.url_field :photo, class: "form-control" %>
+			<br />
+			<%= f.label :num_rooms %>
+			<%= f.number_field :num_rooms, class: "form-control", in: 1..6, step:1  %>
+			<br />
+			<%= f.label :num_baths %>
+			<%= f.number_field :num_baths, class: "form-control", in: 1..6, step:1  %>
+			<br />
+			<%= f.label :pet %>
+			<%= radio_button_tag(:pet, "yes") %>
+			<%= label_tag("I have a pet") %>
+			<%= radio_button_tag(:pet, "no") %>
+			<%= label_tag("I do not have a pet") %>
+			<br />
+			<%= f.label :price, class: "checkbox" %>
+			<%= f.range_field :price, in: 1..6 %>
+			<br />
+			<div class= "btn btn-success">
+				<%= f.submit 'Save' %>
+			</div>
+			<div class= "btn btn-danger">
+				<%= link_to('Cancel', users_path(@user)) %>
+			</div>
+		<% end %>
+
+	</div>
+</div>

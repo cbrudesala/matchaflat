@@ -5,10 +5,10 @@ class User < ActiveRecord::Base
 
 	validates :name, presence: true
 	validates :email, presence: true
-	validates :photo,
 	validates :num_rooms, presence: true
 	validates :num_baths, presence: true
 	validates :pet, presence: true
 	validates :price, presence: true
+
 
 end
