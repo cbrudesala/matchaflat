@@ -12,67 +12,46 @@ class UsersController < ApplicationController
 		@user = User.new user_params
 
 		if @user.save
-			flash[:notice] = "Entry created successfully"
-			redirect_to action: :show, controller: :users
+			flash[:notice] = "User created successfully"
+			redirect_to user_path(@user.id)
 		else
 			flash[:alert] = "Something went wrong :("
 			render 'new'
 		end
 	end
 
+	def show
+		@user = User.find params[:id]
+	end
+
+	def edit
+		@user = User.find params[:id]
+	end
+
+	def update
+		@user = User.find params[:id]
+
+		if @user.update_attributes user_params
+			redirect_to action: :show, controller: :users, id: @user.id
+		else
+			render 'user'
+		end
+	end
+
+	def destroy
+		@user = User.find params[:id]
+
+		if @user.destroy
+			redirect_to action: 'index'
+		else
+			redirect_to :back
+		end
+	end
+
 	private
 
 	def user_params
-		params.require(:user).permit(:name,:email,:num_rooms,:num_baths,:pet,:price,:photo)
+		params.require(:user).permit(:name,:email,:num_rooms,:num_baths,:pet,:max_price,:min_price,:photo)
 	end
+
 end
-
-
-	# class EntriesController < ApplicationController
-
-	# 	def show
-	# 		@project = current_user.projects.find params[:project_id]
-	# 		@entry = @project.entries.find params[:id]
-	# 	end
-
-
-	# 	end
-
-	# 	def edit
-	# 		@project = current_user.projects.find params[:project_id]
-	# 		@entry = @project.entries.find params[:id]
-	# 	end
-
-	# 	def update
-	# 		@project = current_user.projects.find params[:project_id]
-	# 		@entry = @project.entries.find params[:id]
-
-	# 		if @entry.update_attributes entry_params
-	# 			redirect_to action: :show, controller: :entries, project_id: @project.id, id: @entry.id
-	# 		else
-	# 			render 'entry'
-	# 		end
-	# 	end
-
-	# 	def destroy
-	# 		@project = current_user.projects.find params[:project_id]
-	# 		@entry = @project.entries.find params[:id]
-
-	# 		if @entry.destroy
-	# 			redirect_to action: 'index'
-	# 		else
-	# 			redirect_to :back
-	# 		end
-	# 	end
-
-	# 	private
-
-	# 	def project
-	# 		@project ||= current_user.projects.find params[:project_id]
-	# 	end
-
-	# 	def entry_params
-	# 		params.require(:entry).permit(:hours, :minutes, :date)
-	# 	end
-
-	# end

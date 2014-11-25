@@ -1,6 +1,9 @@
 Rails.application.routes.draw do
-  get '/' => 'users#new'
+  # get '/' => 'users#new'
+  # get '/flat' => 'flat#new'
+
   resources :users
+  resources :flats
 
 
   # The priority is based upon order of creation: first created -> highest priority.

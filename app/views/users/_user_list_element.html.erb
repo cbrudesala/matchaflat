@@ -1,0 +1,7 @@
+<li>
+ <%= user_list_element.name %>
+ <%= user_list_element.email %>
+ <%= user_list_element.photo %>
+
+ <%= link_to('Delete', user_path(user_list_element.id), method: :delete, data: { confirm: 'Are you sure' }) %>
+</li>

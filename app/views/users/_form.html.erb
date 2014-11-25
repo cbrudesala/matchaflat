@@ -1,0 +1,35 @@
+<div class= "row">
+	<div class= "col-md-3 col-md-offset-5 bggrey">
+
+		<%= form_for @user do |f| %>
+			<%= f.label :name %>
+			<%= f.text_field :name, class: "form-control" %>
+			<br />
+			<%= f.label :email %>
+			<%= f.text_field :email, class: "form-control" %>
+			<br />
+			<%= f.label :photo %> '(optinal)'
+			<%= f.url_field :photo, class: "form-control" %>
+			<br />
+			<%= f.label :num_rooms %>
+			<%= f.number_field :num_rooms, class: "form-control", in: 1..6, step:1  %>
+			<br />
+			<%= f.label :num_baths %>
+			<%= f.number_field :num_baths, class: "form-control", in: 1..6, step:1  %>
+			<br />
+			<%= f.label :pet %>
+			<br/>
+			<%= f.radio_button(:pet, true) %> I own a pet
+			<%= f.radio_button(:pet, false) %> I don't own a pet
+			<br />
+			<br />
+			<%= f.label :price %>
+			<%= f.select(:min_price, [600, 700], {:class => 'form-control mtop'})%>
+			<%= f.select(:max_price, [800, 1500], {:class => 'form-control mtop'})%>
+			<br />
+			<%= f.submit 'Save', class: "btn btn-success" %>
+			<%= link_to 'Cancel', users_path(@user), class: "btn btn-danger" %>
+		<% end %>
+
+	</div>
+</div>

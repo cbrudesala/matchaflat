@@ -7,7 +7,8 @@ class CreateUsers < ActiveRecord::Migration
     	t.integer :num_rooms
     	t.integer :num_baths
     	t.boolean :pet
-    	t.integer :price
+      t.integer :min_price
+    	t.integer :max_price
       t.timestamps
     end
   end

@@ -3,12 +3,12 @@ class User < ActiveRecord::Base
 	# has_many :availability_dates
 	# has_and_belongs_to many :areas
 
-	validates :name, presence: true
-	validates :email, presence: true
-	validates :num_rooms, presence: true
-	validates :num_baths, presence: true
-	validates :pet, presence: true
-	validates :price, presence: true
+	# validates :name, presence: true
+	# validates :email, presence: true
+	# validates :num_rooms, presence: true
+	# validates :num_baths, presence: true
+	# validates :pet, presence: true
+	# validates :max_price, presence: true
 
 
 end
