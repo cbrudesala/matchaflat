@@ -1,4 +1,4 @@
-class UsersController < ApplicationController
+ class UsersController < ApplicationController
 
 	def index
 		@users = User.all
@@ -51,7 +51,7 @@ class UsersController < ApplicationController
 	private
 
 	def user_params
-		params.require(:user).permit(:name,:email,:num_rooms,:num_baths,:pet,:max_price,:min_price,:photo)
+		params.require(:user).permit(:name,:email,:phone,:photo)
 	end
 
 end

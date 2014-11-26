@@ -5,10 +5,7 @@
 <ul> <%= @user.photo %>
 	<li>Name: <strong><%= @user.name %></strong> </li>
 	<li>Email: <strong><%= @user.email %></strong> </li>
-	<li>Rooms number: <strong><%= @user.num_rooms %></strong> </li>
-	<li>Rooms number: <strong><%= @user.num_baths %></strong> </li>
-	<li>Pets: <strong><%= @user.pet %></strong> </li>
-	<li>Maximum price: <strong><%= @user.max_price %></strong> </li>
+	<li>Phone: <strong><%= @user.phone %></strong> </li>
 </ul>
 
 <%= link_to 'edit user', edit_user_path(@user.id), class: "btn btn-success" %>

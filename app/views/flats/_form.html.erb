@@ -24,7 +24,8 @@
 			<br />
 			<br />
 			<%= f.label :price %>
-			<%= f.number_field :price, class: 'form-control'%>
+			<%= f.select(:min_price, [600, 700], {:class => 'form-control mtop'})%>
+			<%= f.select(:max_price, [800, 1500], {:class => 'form-control mtop'})%>
 			<br />
 			<%= f.submit 'Save', class: "btn btn-success" %>
 			<%= link_to 'Cancel', flats_path(@flat), class: "btn btn-danger" %>
