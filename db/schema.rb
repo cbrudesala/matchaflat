@@ -17,13 +17,10 @@ ActiveRecord::Schema.define(version: 20141124161224) do
   enable_extension "plpgsql"
 
   create_table "flats", force: true do |t|
-    t.string   "name"
-    t.string   "email"
-    t.string   "photo"
     t.integer  "num_rooms"
     t.integer  "num_baths"
     t.boolean  "pet"
-    t.integer  "price"
+    t.string   "address"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
@@ -31,12 +28,8 @@ ActiveRecord::Schema.define(version: 20141124161224) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
+    t.string   "phone"
     t.string   "photo"
-    t.integer  "num_rooms"
-    t.integer  "num_baths"
-    t.boolean  "pet"
-    t.integer  "min_price"
-    t.integer  "max_price"
     t.datetime "created_at"
     t.datetime "updated_at"
   end
