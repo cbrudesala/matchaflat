@@ -2,6 +2,11 @@
  <%= user_list_element.name %>
  <%= user_list_element.email %>
  <%= user_list_element.photo %>
+ <%= user_list_element.num_rooms %>
+ <%= user_list_element.num_baths %>
+ <%= user_list_element.pet %>
+ <%= user_list_element.max_price %>
+ <%= user_list_element.min_price %>
 
  <%= link_to('Delete', user_path(user_list_element.id), method: :delete, data: { confirm: 'Are you sure' }) %>
 </li>
