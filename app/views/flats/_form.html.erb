@@ -2,8 +2,8 @@
 	<div class= "col-md-3 col-md-offset-5 bggrey">
 
 		<%= form_for @flat do |f| %>
-			<%= f.label :photos %> (optinal)
-			<%= f.file_field :photos, class: "form-control" %>
+			<%= f.label :flat_photo %> (optinal)
+			<%= f.file_field :flat_photo, class: "form-control" %>
 			<br />
 			<%= f.label :num_rooms %>
 			<%= f.number_field :num_rooms, class: "form-control", in: 1..6, step:1  %>

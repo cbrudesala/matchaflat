@@ -1,0 +1,11 @@
+<h1>
+	Rooms list
+</h1>
+
+<ul> <% @rooms.each do |room| %>
+	<%= render 'room_list_element', room_list_element: room %>
+	<% end %>
+</ul>
+
+<br/>
+<%= link_to 'new room', new_room_path %>

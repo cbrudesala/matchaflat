@@ -1,0 +1,17 @@
+<div class= "row">
+	<div class= "col-md-3 col-md-offset-5 bggrey">
+
+		<%= form_for @flat do |f| %>
+			<%= f.label :room_photo %> (optinal)
+			<%= f.file_field :room_photo%>
+			<br />
+			<%= f.label :price %>
+				<%= f.select(:min_price, [600, 700], {:class => 'form-control mtop'})%>
+				<%= f.select(:max_price, [800, 1500], {:class => 'form-control mtop'})%>
+				<br />
+			<br />
+			<%= f.submit 'Save', class: "btn btn-success" %>
+			<%= link_to 'Cancel', flats_path(@flat), class: "btn btn-danger" %>
+		<% end %>
+	</div>
+</div>

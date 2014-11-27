@@ -3,10 +3,8 @@
 </h1>
 
 <ul>
-	<li>Flat photo: <%= image_tag @flat.flat_photo.url(:large), class: "" %></li>
-	<li>Flats number: <strong><%= @flat.num_flats %></strong> </li>
-	<li>Flats number: <strong><%= @flat.num_baths %></strong> </li>
-	<li>Pets: <strong><%= @flat.pet %></strong> </li>
+	<li>Price: <strong><%= @flat.price %></strong> </li>
+	<li>Room photo: <%= image_tag @room.room_photo.url(:large), class: "" %></li>
 </ul>
 
 <%= link_to 'edit flat', edit_flat_path(@flat.id), class: "btn btn-success" %>
