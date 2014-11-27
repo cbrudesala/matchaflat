@@ -16,6 +16,8 @@
 			<%= f.radio_button(:pet, 'true') %> I accept pets
 			<%= f.radio_button(:pet, 'false') %> I don't accept pets
 			<br />
+			<%= f.label :address %>
+			<%= f.text_field :address, class: "form-control" %>
 			<br />
 			<%= f.submit 'Save', class: "btn btn-success" %>
 			<%= link_to 'Cancel', flats_path(@flat), class: "btn btn-danger" %>
