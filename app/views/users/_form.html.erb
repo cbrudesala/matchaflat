@@ -1,19 +1,12 @@
-<div class= "row">
-	<div class= "col-md-3 col-md-offset-5 bggrey bg">
-
-		<%= form_for @user do |f| %>
-			<%= f.label :name %>
-			<%= f.text_field :name, class: "form-control" %>
-			<br />
-			<%= f.label :email %>
-			<%= f.text_field :email, class: "form-control" %>
-			<br />
-			<%= f.label :avatar %> (optinal)
-			<%= f.file_field :avatar, class: "form-control" %>
-			<br />
-			<%= f.submit 'Save', class: "btn btn-success" %>
-			<%= link_to 'Cancel', users_path(@user), class: "btn btn-danger" %>
-		<% end %>
-
-	</div>
+<div class= "col-md-3 col-md-offset-5 bg_color">
+	<%= form_for @user do |f| %>
+		<%= f.text_field :name, placeholder: 'Write your Name' , class: "form-control" %>
+		<br />
+		<%= f.text_field :email, placeholder: 'Write your Email' ,class: "form-control" %>
+		<br />
+		<%= f.label :avatar %> (optinal)
+		<%= f.file_field :avatar, class: "form-control" %>
+		<br />
+		<%= f.submit 'Sign Up', class: "btn btn-success btn-lg btn-block mb" %>
+	<% end %>
 </div>

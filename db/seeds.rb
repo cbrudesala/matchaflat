@@ -5,3 +5,9 @@
 #
 #   cities = City.create([{ name: 'Chicago' }, { name: 'Copenhagen' }])
 #   Mayor.create(name: 'Emanuel', city: cities.first)
+
+areas=['Eixample', 'Gracia', 'Poble nou', 'Gotic']
+
+50.times do
+	[]
+end

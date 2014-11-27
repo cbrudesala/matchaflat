@@ -6,6 +6,7 @@
 
 	def new
 		@user = User.new
+		render :layout => 'form'
 	end
 
 	def create
