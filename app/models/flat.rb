@@ -1,9 +1,10 @@
 class Flat < ActiveRecord::Base
-	validates :name, presence: true
-	validates :email, presence: true
-	validates :phone, presence: true
+	has_many :room
+	belongs_to :user
 
+	validates :num_rooms, presence: true
+	validates :num_baths, presence: true
 	validates_inclusion_of :pet, :in => [true, false]
-	validates :max_price, presence: true
 
 end
+

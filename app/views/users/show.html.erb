@@ -2,10 +2,9 @@
 	User information
 </h1>
 
-<ul> <%= @user.photo %>
+<ul> <%= image_tag @user.avatar.url(:medium), class: "img-circle" %>
 	<li>Name: <strong><%= @user.name %></strong> </li>
 	<li>Email: <strong><%= @user.email %></strong> </li>
-	<li>Phone: <strong><%= @user.phone %></strong> </li>
 </ul>
 
 <%= link_to 'edit user', edit_user_path(@user.id), class: "btn btn-success" %>

@@ -2,14 +2,12 @@
 	Flat information
 </h1>
 
-<ul> <%= @flat.photo %>
-	<li>Name: <strong><%= @flat.name %></strong> </li>
-	<li>Email: <strong><%= @flat.email %></strong> </li>
+<ul> <%= image_tag @uflat.photos.url(:medium), class: "img-circle" %>
 	<li>Rooms number: <strong><%= @flat.num_rooms %></strong> </li>
 	<li>Rooms number: <strong><%= @flat.num_baths %></strong> </li>
 	<li>Pets: <strong><%= @flat.pet %></strong> </li>
-	<li>Price: <strong><%= @flat.price %></strong> </li>
 </ul>
 
-<%= link_to 'edit flat', edit_flat_path(@flat.id), class: "btn btn-danger" %>
+<%= link_to 'edit flat', edit_flat_path(@flat.id), class: "btn btn-success" %>
+<%= link_to 'flat list', flats_path, class: "btn btn-success" %>
 <%= button_to 'delete flat', @flat, method: :delete, class: "btn btn-danger" %>

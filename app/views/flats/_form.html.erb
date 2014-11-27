@@ -2,14 +2,8 @@
 	<div class= "col-md-3 col-md-offset-5 bggrey">
 
 		<%= form_for @flat do |f| %>
-			<%= f.label :name %>
-			<%= f.text_field :name, class: "form-control" %>
-			<br />
-			<%= f.label :email %>
-			<%= f.text_field :email, class: "form-control" %>
-			<br />
-			<%= f.label :photo %> '(optinal)'
-			<%= f.url_field :photo, class: "form-control" %>
+			<%= f.label :photos %> (optinal)
+			<%= f.file_field :photos, class: "form-control" %>
 			<br />
 			<%= f.label :num_rooms %>
 			<%= f.number_field :num_rooms, class: "form-control", in: 1..6, step:1  %>
@@ -23,13 +17,8 @@
 			<%= f.radio_button(:pet, 'false') %> I don't accept pets
 			<br />
 			<br />
-			<%= f.label :price %>
-			<%= f.select(:min_price, [600, 700], {:class => 'form-control mtop'})%>
-			<%= f.select(:max_price, [800, 1500], {:class => 'form-control mtop'})%>
-			<br />
 			<%= f.submit 'Save', class: "btn btn-success" %>
 			<%= link_to 'Cancel', flats_path(@flat), class: "btn btn-danger" %>
 		<% end %>
-
 	</div>
 </div>
