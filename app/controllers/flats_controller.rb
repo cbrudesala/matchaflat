@@ -5,6 +5,7 @@ class FlatsController < ApplicationController
 
 	def new
 		@flat = Flat.new
+		render :layout => 'form'
 	end
 
 	def create
@@ -21,6 +22,7 @@ class FlatsController < ApplicationController
 
 	def show
 		@flat = Flat.find params[:id]
+		render :layout => 'form'
 	end
 
 	def edit
@@ -50,6 +52,6 @@ class FlatsController < ApplicationController
 	private
 
 	def flat_params
-		params.require(:flat).permit(:flat_photo,:num_rooms,:num_baths,:pet,:address)
+		params.require(:flat).permit(:num_rooms,:num_baths,:pet,:address)
 	end
 end

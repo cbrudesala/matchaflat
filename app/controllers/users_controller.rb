@@ -23,10 +23,12 @@
 
 	def show
 		@user = User.find params[:id]
+		render :layout => 'form'
 	end
 
 	def edit
 		@user = User.find params[:id]
+		render :layout => 'form'
 	end
 
 	def update

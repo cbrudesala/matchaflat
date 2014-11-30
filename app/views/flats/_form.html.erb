@@ -1,26 +1,25 @@
-<div class= "row">
-	<div class= "col-md-3 col-md-offset-5 bggrey">
+<div class= "col-md-3 col-md-offset-5 bg_color">
 
-		<%= form_for @flat do |f| %>
-			<%= f.label :flat_photo %> (optinal)
-			<%= f.file_field :flat_photo, class: "form-control" %>
-			<br />
-			<%= f.label :num_rooms %>
-			<%= f.number_field :num_rooms, class: "form-control", in: 1..6, step:1  %>
-			<br />
-			<%= f.label :num_baths %>
-			<%= f.number_field :num_baths, class: "form-control", in: 1..6, step:1  %>
-			<br />
-			<%= f.label :pet %>
-			<br/>
-			<%= f.radio_button(:pet, 'true') %> I accept pets
-			<%= f.radio_button(:pet, 'false') %> I don't accept pets
-			<br />
-			<%= f.label :address %>
-			<%= f.text_field :address, class: "form-control" %>
-			<br />
-			<%= f.submit 'Save', class: "btn btn-success" %>
-			<%= link_to 'Cancel', flats_path(@flat), class: "btn btn-danger" %>
-		<% end %>
-	</div>
+	<%= form_for @flat do |f| %>
+		<%= f.label :flat_photo %> (optinal)
+		<%= f.file_field :flat_photo, class: "form-control" %>
+		<br />
+		<%= f.label :num_rooms %>
+		<%= f.number_field :num_rooms, class: "form-control", in: 1..6, step:1  %>
+		<br />
+		<%= f.label :num_baths %>
+		<%= f.number_field :num_baths, class: "form-control", in: 1..6, step:1  %>
+		<br />
+		<%= f.label :pet %>
+		<br/>
+		<%= f.radio_button(:pet, 'true') %> I accept pets
+		<%= f.radio_button(:pet, 'false') %> I don't accept pets
+		<br/>
+		<br/>
+		<%= f.label :address %>
+		<%= f.text_field :address, class: "form-control" %>
+		<br/>
+		<%= f.submit 'Create Room', class: "btn btn-success btn-lg btn-block mb" %>
+		<%= link_to 'FIND YOUR PERFECT GUEST', new_flat_path, class: "links butt scroll vcenter" %>
+	<% end %>
 </div>

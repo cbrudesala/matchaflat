@@ -1,15 +1,19 @@
-<h1>
+<h2 class= "col-md-3 col-md-offset-5 bg_new_color arrow arrow-s desc">
 	Flat information
-</h1>
+</h2>
 
-<ul>
-	<li>Flat photo: <%= image_tag @flat.flat_photo.url(:large), class: "" %></li>
-	<li>Flats number: <strong><%= @flat.num_flats %></strong> </li>
-	<li>Flats number: <strong><%= @flat.num_baths %></strong> </li>
-	<li>Pets: <strong><%= @flat.pet %></strong> </li>
-	<li>Address: <strong><%= @flat.address %></strong> </li>
-</ul>
+<div class=" col-md-3 col-md-offset-5 bg_color contenido">
+	<ul>
 
-<%= link_to 'edit flat', edit_flat_path(@flat.id), class: "btn btn-success" %>
-<%= link_to 'flat list', flats_path, class: "btn btn-success" %>
-<%= button_to 'delete flat', @flat, method: :delete, class: "btn btn-danger" %>
+		<li>Rooms number: <strong><%= @flat.num_rooms %></strong> </li>
+		<li>Baths number: <strong><%= @flat.num_baths %></strong> </li>
+		<li>Pets: <strong><%= @flat.pet %></strong> </li>
+		<li>Address: <strong><%= @flat.address %></strong> </li>
+	</ul>
+
+	<%= link_to 'edit flat', edit_flat_path(@flat.id), class: "btn btn-success" %>
+	<%= link_to 'delete flat', @flat, method: :delete, class: "btn btn-danger" %>
+	<%= link_to 'create a ROOM', new_room_path, class: "links butt scroll vcenter" %>
+	</br>
+	</br>
+</div>
