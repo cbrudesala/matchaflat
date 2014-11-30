@@ -19,31 +19,8 @@
 	margin-top: -80px;
 }
 
-.fri{
-	border: 2px solid;
-	background-color: transparent;
-	padding: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	float: right;
-	&:hover{
-		background-color: lightblue;
-	}
-}
-
 .fri2{
 	margin-left: -2px;
-}
-
-.butt{
-	border: 2px solid;
-	background-color: transparent;
-	padding: 20px;
-	padding-top: 10px;
-	padding-bottom: 10px;
-	&:hover{
-		background-color: lightblue;
-	}
 }
 
 .menu_right{
@@ -65,8 +42,12 @@
   display: inline-block;
 }
 
-.fle{
+.fleft{
 	float: left;
+}
+
+.fright{
+	float: right;
 }
 
 .ml{
@@ -75,8 +56,9 @@
 }
 
 .hamb{
-	max-weight: 20px;
-	max-height: 30px;
+	width: 39px;
+	height: 39px;
+	border: 0px;
 }
 
 .circle{
