@@ -1,0 +1,34 @@
+@import "variables";
+
+.bg_new_color {
+	background-color: $primary-color;
+	border-radius: 10px 10px 0 0;
+	padding: 8px;
+}
+
+.desc{
+	color: white;
+	margin-bottom: -24px;
+	z-index: 1;
+	font-size: 20px;
+	padding: 20px;
+	text-align: center;
+	font-weight: normal;
+	font-family: Arial, Helvetica, sans-serif;
+}
+
+.arrow:before {
+	position: absolute;
+	width: 20px;
+	height: 20px;
+	content: " ";
+}
+
+.arrow-s:before {
+	bottom: -28px;
+	left: 50%;
+	margin-left: -14.5px;
+	border: 15px solid transparent;
+	border-top-color: $primary-color;
+}
+

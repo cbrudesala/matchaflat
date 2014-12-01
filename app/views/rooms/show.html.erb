@@ -1,0 +1,12 @@
+<h1>
+	Flat information
+</h1>
+
+<ul>
+	<li>Price: <strong><%= @flat.price %></strong> </li>
+	<li>Room photo: <%= image_tag @room.room_photo.url(:large), class: "" %></li>
+</ul>
+
+<%= link_to 'edit flat', edit_flat_path(@flat.id), class: "btn btn-success" %>
+<%= link_to 'flat list', flats_path, class: "btn btn-success" %>
+<%= button_to 'delete flat', @flat, method: :delete, class: "btn btn-danger" %>

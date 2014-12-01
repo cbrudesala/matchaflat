@@ -1,3 +1,19 @@
-.bggrey {
-	background-color: #EEEEEE;
+.bg_color {
+	padding-top:60px;
+	background-color: white;
+	border-radius: 0 0 10px 10px;
+}
+
+.bg_img{
+  background: url(bg2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  z-index: -1;
+}
+
+.opciones{
+  text-align: center;
 }

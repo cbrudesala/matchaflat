@@ -1,0 +1,17 @@
+<div class= "col-md-3 col-md-offset-5 bg_color">
+	<%= form_for [@flat, @room] do |f| %>
+		<%= f.hidden_field :flat_id, :value => @flat.id %>
+
+		<%= f.label :room_photo %> (optinal)
+		<%= f.file_field :room_photo%>
+		<br />
+		<%= f.label :price %>
+
+		<br/>
+		<br/>
+		<%= f.submit 'SEE MATCH AND FIND YOUR PERFECT RENTER', class: "btn btn-lg btn-block" %>
+		<br/>
+		<br/>
+		<br/>
+	<% end %>
+</div>

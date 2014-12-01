@@ -1,34 +1,26 @@
-<div class= "row">
-	<div class= "col-md-3 col-md-offset-5 bggrey">
+<div class= "col-md-3 col-md-offset-5 bg_color">
 
-		<%= form_for @flat do |f| %>
-			<%= f.label :name %>
-			<%= f.text_field :name, class: "form-control" %>
-			<br />
-			<%= f.label :email %>
-			<%= f.text_field :email, class: "form-control" %>
-			<br />
-			<%= f.label :photo %> '(optinal)'
-			<%= f.url_field :photo, class: "form-control" %>
-			<br />
-			<%= f.label :num_rooms %>
-			<%= f.number_field :num_rooms, class: "form-control", in: 1..6, step:1  %>
-			<br />
-			<%= f.label :num_baths %>
-			<%= f.number_field :num_baths, class: "form-control", in: 1..6, step:1  %>
-			<br />
-			<%= f.label :pet %>
-			<br/>
-			<%= f.radio_button(:pet, 'true') %> I accept pets
-			<%= f.radio_button(:pet, 'false') %> I don't accept pets
-			<br />
-			<br />
-			<%= f.label :price %>
-			<%= f.number_field :price, class: 'form-control'%>
-			<br />
-			<%= f.submit 'Save', class: "btn btn-success" %>
-			<%= link_to 'Cancel', flats_path(@flat), class: "btn btn-danger" %>
-		<% end %>
+	<%= form_for [@user, @flat] do |f| %>
+		<%= f.hidden_field :user_id, :value => @user.id %>
 
-	</div>
+		<%= f.label :flat_photo %> (optinal)
+		<%= f.file_field :flat_photo, class: "form-control" %>
+		<br />
+		<%= f.label :num_rooms %>
+		<%= f.number_field :num_rooms, class: "form-control", in: 1..6, step:1  %>
+		<br />
+		<%= f.label :num_baths %>
+		<%= f.number_field :num_baths, class: "form-control", in: 1..6, step:1  %>
+		<br />
+		<%= f.label :pet %>
+		<br/>
+		<%= f.radio_button(:pet, 'true') %> I accept pets
+		<%= f.radio_button(:pet, 'false') %> I don't accept pets
+		<br/>
+		<br/>
+		<%= f.label :address %>
+		<%= f.text_field :address, class: "form-control" %>
+		<br/>
+		<%= f.submit 'Create Room', class: "btn btn-success btn-lg btn-block mb" %>
+	<% end %>
 </div>

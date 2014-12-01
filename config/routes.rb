@@ -2,8 +2,15 @@ Rails.application.routes.draw do
   # get '/' => 'users#new'
   # get '/flat' => 'flat#new'
 
-  resources :users
-  resources :flats
+  root to: 'site#home'
+
+  resources :users do
+    resources :flats do
+      resources :rooms
+    end
+  end
+
+  get '/match/show' => 'match#show'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

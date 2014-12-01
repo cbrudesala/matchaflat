@@ -1,15 +1,19 @@
-<h1>
+<h2 class= "col-md-3 col-md-offset-5 bg_new_color arrow arrow-s desc">
 	Flat information
-</h1>
+</h2>
 
-<ul> <%= @flat.photo %>
-	<li>Name: <strong><%= @flat.name %></strong> </li>
-	<li>Email: <strong><%= @flat.email %></strong> </li>
-	<li>Rooms number: <strong><%= @flat.num_rooms %></strong> </li>
-	<li>Rooms number: <strong><%= @flat.num_baths %></strong> </li>
-	<li>Pets: <strong><%= @flat.pet %></strong> </li>
-	<li>Price: <strong><%= @flat.price %></strong> </li>
-</ul>
+<div class=" col-md-3 col-md-offset-5 bg_color contenido">
+	<ul>
 
-<%= link_to 'edit flat', edit_flat_path(@flat.id), class: "btn btn-danger" %>
-<%= button_to 'delete flat', @flat, method: :delete, class: "btn btn-danger" %>
+		<li>Rooms number: <strong><%= @flat.num_rooms %></strong> </li>
+		<li>Baths number: <strong><%= @flat.num_baths %></strong> </li>
+		<li>Pets: <strong><%= @flat.pet %></strong> </li>
+		<li>Address: <strong><%= @flat.address %></strong> </li>
+	</ul>
+
+	<%= link_to 'edit flat', edit_user_flat_path(@user.id, @flat.id), class: "links butt scroll vcenter" %>
+	<%= link_to 'delete flat', user_flat_path(@user.id, @flat), method: :delete, class: "links butt scroll vcenter btn-danger", confirm: "Are you sure?" %>
+	<%= link_to 'create a ROOM', new_user_flat_room_path(@user.id, @flat.id), class: "links butt scroll vcenter" %>
+	</br>
+	</br>
+</div>

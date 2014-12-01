@@ -16,3 +16,32 @@
 
 @import "bootstrap-sprockets";
 @import "bootstrap";
+@import "variables";
+
+.mb{
+	margin-bottom: 20px;
+}
+
+.visible{
+	display: block;
+}
+
+.btn{
+	text-decoration: none;
+	font-size: 0.8em;
+	color: black;
+	border: 2px solid black;
+	background-color: transparent;
+	padding: 20px;
+	padding-top: 10px;
+	padding-bottom: 10px;
+	border-radius: 0;
+	text-align: center;
+	font-size: 0.8em;
+	&:hover{
+		color: white;
+		text-decoration: none;
+		border: 2px solid $primary-color;
+ 		background-color: $primary-color;
+  }
+}

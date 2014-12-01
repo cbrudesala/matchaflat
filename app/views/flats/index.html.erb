@@ -1,11 +1,19 @@
-<h1>
+<h2 class= "col-md-3 col-md-offset-5 bg_new_color arrow arrow-s desc">
 	Flats list
-</h1>
+</h2>
 
-<ul> <% @flats.each do |user| %>
-	<%= render 'flat_list_element', flat_list_element: flat %>
-	<% end %>
-</ul>
+<div class=" col-md-3 col-md-offset-5 bg_color contenido">
+	<ul>
+		<li>
+			<%= @flat.flat_photo %>
+			<%= @flat.num_rooms %>
+			<%= @flat.num_baths %>
+			<%= @flat.pet %>
+			<%= @flat.address %>
+		</li>
+	</ul>
 
-<br/>
-<%= link_to 'new flat', new_flat_path %>
+	<%= link_to('Delete', user_flat_path(@user.id, @flat), method: :delete, data: { confirm: 'Are you sure' }) %>
+	<br/>
+	<%= link_to 'new room', new_user_flat_room_path(@user.id, @flat) %>
+</div>
