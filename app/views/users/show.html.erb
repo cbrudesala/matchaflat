@@ -15,7 +15,10 @@
 		<%= link_to 'CREATE YOUR PERFECT FLAT', new_user_flat_path(@user.id), class: "links btn scroll vcenter" %>
 		</br>
 		</br>
-		<%= link_to 'SEE YOUR FLAT', user_flat_path(@user.id, @user.flat.id), class: "links btn scroll vcenter" %>
+
+		<% if @user.flat %>
+			<%= link_to 'SEE YOUR FLAT', user_flat_path(@user.id, @user.flat.id), class: "links btn scroll vcenter" %>
+		<%end%>
 		</br>
 		</br>
 		<%= link_to 'FIND YOUR MATCH', match_show_path, class: "links btn scroll vcenter" %>

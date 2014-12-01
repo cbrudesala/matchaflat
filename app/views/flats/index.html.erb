@@ -13,7 +13,7 @@
 		</li>
 	</ul>
 
-	<%= link_to('Delete', flat_path(flat_list_element.id), method: :delete, data: { confirm: 'Are you sure' }) %>
+	<%= link_to('Delete', user_flat_path(@user.id, @flat), method: :delete, data: { confirm: 'Are you sure' }) %>
 	<br/>
 	<%= link_to 'new room', new_user_flat_room_path(@user.id, @flat) %>
 </div>
