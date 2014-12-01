@@ -1,32 +1,35 @@
 class RoomsController < ApplicationController
 	def index
-		@rooms = Room.all
+		@user_id = params[:user_id]
+		@flat =  Flat.find params[:flat_id]
+		@rooms = @flat.rooms
 	end
 
 	def new
 		@room = Room.new
+		@user =  User.find params[:user_id]
+		@flat =  Flat.find params[:flat_id]
 		render :layout => 'form'
 	end
 
 	def create
 		@room = Room.new room_params
+		user_id = params[:user_id]
+		flat_id = params[:flat_id]
 
 		if @room.save
 			flash[:notice] = "room created successfully"
-			redirect_to room_path(@room.id)
+			redirect_to user_flat_rooms_path(user_id, flat_id)
 		else
 			flash[:alert] = "Something went wrong :("
 			render 'new'
 		end
 	end
 
-	def show
-		@room = Room.find params[:id]
-		render :layout => 'form'
-	end
-
 	def edit
 		@room = Room.find params[:id]
+		@user_id = params[:user_id]
+		@flat_id = params[:flat_id]
 	end
 
 	def update
@@ -52,6 +55,6 @@ class RoomsController < ApplicationController
 	private
 
 	def room_params
-		params.require(:room).permit(:room_photo,:min_price,:max_price,:flat_id)
+		params.require(:room).permit(:room_photo,:price,:flat_id)
 	end
 end

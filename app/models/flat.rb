@@ -1,7 +1,7 @@
 class Flat < ActiveRecord::Base
 	attr_accessor :flat_photo_file_name
 
-	has_many :room
+	has_many :rooms
 	belongs_to :user
 
 	validates :user_id, uniqueness: true

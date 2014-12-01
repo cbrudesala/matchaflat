@@ -1,11 +1,22 @@
 <h1>
-	Rooms list
+  Rooms list
 </h1>
 
-<ul> <% @rooms.each do |room| %>
-	<%= render 'room_list_element', room_list_element: room %>
-	<% end %>
+<ul>
+  <% @rooms.each do |room| %>
+    <li>
+    <%= room.room_photo %>
+    <%= room.price %>
+
+    <%= link_to 'delete room', user_flat_room_path(@user_id, @flat.id, room.id), method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure' } %>
+    <%= link_to 'edit room', edit_user_flat_room_path(@user_id, @flat.id, room.id), method: :delete, class: "btn btn-danger", data: { confirm: 'Are you sure' } %>
+
+    </li>
+  <% end %>
 </ul>
 
 <br/>
-<%= link_to 'new room', new_room_path %>
+<% if @flat.num_rooms > @flat.rooms.count %>
+  <%= link_to 'new room', new_user_flat_room_path(@user_id, @flat.id) %>
+<% end %>
+
