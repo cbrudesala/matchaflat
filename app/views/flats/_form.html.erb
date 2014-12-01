@@ -1,6 +1,8 @@
 <div class= "col-md-3 col-md-offset-5 bg_color">
 
-	<%= form_for @flat do |f| %>
+	<%= form_for [@user, @flat] do |f| %>
+		<%= f.hidden_field :user_id, :value => @user.id %>
+
 		<%= f.label :flat_photo %> (optinal)
 		<%= f.file_field :flat_photo, class: "form-control" %>
 		<br />

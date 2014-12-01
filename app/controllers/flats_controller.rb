@@ -1,19 +1,25 @@
 class FlatsController < ApplicationController
 	def index
-		@flats = Flat.all
+		@user =  User.find params[:user_id]
+		@flat = @user.flat
+		puts '='*50
+		puts @flat
+		puts '='*50
 	end
 
 	def new
 		@flat = Flat.new
+		@user =  User.find params[:user_id]
 		render :layout => 'form'
 	end
 
 	def create
 		@flat = Flat.new flat_params
+		@user =  User.find params[:user_id]
 
 		if @flat.save
 			flash[:notice] = "Flat created successfully"
-			redirect_to flat_path(@flat.id)
+			redirect_to user_flat_path(@user.id, @flat.id)
 		else
 			flash[:alert] = "Something went wrong :("
 			render 'new'
@@ -21,6 +27,7 @@ class FlatsController < ApplicationController
 	end
 
 	def show
+		@user =  User.find params[:user_id]
 		@flat = Flat.find params[:id]
 		render :layout => 'form'
 	end
@@ -43,7 +50,7 @@ class FlatsController < ApplicationController
 		@flat = Flat.find params[:id]
 
 		if @flat.destroy
-			redirect_to action: 'index'
+			redirect_to action: :show, controller: :users, id: params[:user_id]
 		else
 			redirect_to :back
 		end
@@ -52,6 +59,6 @@ class FlatsController < ApplicationController
 	private
 
 	def flat_params
-		params.require(:flat).permit(:num_rooms,:num_baths,:pet,:address)
+		params.require(:flat).permit(:num_rooms,:num_baths,:pet,:address,:flat_photo,:user_id)
 	end
 end

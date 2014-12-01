@@ -10,16 +10,16 @@
   </div>
 
   <div class="menu_right">
-    <a href="http://localhost:3000/users/new?" class="btn fright fri2">SIGNUP</a>
-    <a href="http://localhost:3000/users/new?" class="btn fright ">LOGIN</a>
+    <%= link_to 'SIGNUP', new_user_path, class: "btn fright fri2" %>
+    <%= link_to 'LOGIN', new_user_path, class: "btn fright" %>
   </div>
 </nav>
 
 <main class="main_my">
   <section class="intro">
     <div class="circle vcenter">
-      <a href="http://localhost:3000/flats/new?" class="btn vcenter">FIND YOUR PERFECT ROOM</a>
-      <a href="http://localhost:3000/flats/new?" class="btn vcenter">FIND YOUR PERFECT RENTER</a>
+      <%= link_to 'FIND YOUR PERFECT ROOM', match_show_path, class: "btn vcenter" %>
+      <%= link_to 'FIND YOUR PERFECT RENTER', match_show_path, class: "btn vcenter" %>
     </div>
   </section>
   <p class= "scroll">SCROLL TO LEARN HOW IT WORKS </br>v</p>

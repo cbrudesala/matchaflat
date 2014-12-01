@@ -9,12 +9,15 @@
 
 	<div class="opciones">
 		</br>
-		<%= link_to 'edit user', edit_user_path(@user.id), class: "links butt scroll vcenter" %>
+		<%= link_to 'edit user', edit_user_path(@user.id), class: "links btn scroll vcenter" %>
 		</br>
 		</br>
-		<%= link_to 'FIND YOUR PERFECT ROOM', new_flat_path, class: "links butt scroll vcenter" %>
+		<%= link_to 'CREATE YOUR PERFECT FLAT', new_user_flat_path(@user.id), class: "links btn scroll vcenter" %>
 		</br>
 		</br>
-		<%= link_to 'FIND YOUR PERFECT GUEST', new_flat_path, class: "links butt scroll vcenter" %>
+		<%= link_to 'SEE YOUR FLAT', user_flat_path(@user.id, @user.flat.id), class: "links btn scroll vcenter" %>
+		</br>
+		</br>
+		<%= link_to 'FIND YOUR MATCH', match_show_path, class: "links btn scroll vcenter" %>
 	</div>
 </div>

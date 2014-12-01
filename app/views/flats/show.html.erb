@@ -11,9 +11,9 @@
 		<li>Address: <strong><%= @flat.address %></strong> </li>
 	</ul>
 
-	<%= link_to 'edit flat', edit_flat_path(@flat.id), class: "btn btn-success" %>
-	<%= link_to 'delete flat', @flat, method: :delete, class: "btn btn-danger" %>
-	<%= link_to 'create a ROOM', new_room_path, class: "links butt scroll vcenter" %>
+	<%= link_to 'edit flat', edit_user_flat_path(@user.id, @flat.id), class: "links butt scroll vcenter" %>
+	<%= link_to 'delete flat', user_flat_path(@user.id, @flat), method: :delete, class: "links butt scroll vcenter btn-danger", confirm: "Are you sure?" %>
+	<%= link_to 'create a ROOM', new_user_flat_room_path(@user.id, @flat.id), class: "links butt scroll vcenter" %>
 	</br>
 	</br>
 </div>
