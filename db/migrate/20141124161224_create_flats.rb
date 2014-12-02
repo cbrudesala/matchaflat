@@ -4,7 +4,7 @@ class CreateFlats < ActiveRecord::Migration
   		t.integer :num_rooms
   		t.integer :num_baths
   		t.boolean :pet
-      t.string :address
+      t.string :area
       t.text :flat_photo
       t.timestamps
     end

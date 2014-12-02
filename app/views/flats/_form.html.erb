@@ -18,8 +18,8 @@
 		<%= f.radio_button(:pet, 'false') %> I don't accept pets
 		<br/>
 		<br/>
-		<%= f.label :address %>
-		<%= f.text_field :address, class: "form-control" %>
+		<%= f.label :area %>
+		<%= f.select :area, ['Eixample', 'Sants', 'Poble Nou', 'Gràcia', 'Raval', 'Gotic', 'Sarria', 'Barceloneta'], {}, {:class => 'form-control mtop'}%>
 		<br/>
 		<%= f.submit 'Create Room', class: "btn btn-success btn-lg btn-block mb" %>
 	<% end %>

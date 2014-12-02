@@ -7,7 +7,7 @@ class Flat < ActiveRecord::Base
 	validates :user_id, uniqueness: true
 	validates :num_rooms, presence: true
 	validates :num_baths, presence: true
-	validates :address, presence: true
+	validates :area, presence: true
 	validates_inclusion_of :pet, :in => [true, false]
 	validates_presence_of :user
 

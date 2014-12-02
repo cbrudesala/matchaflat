@@ -31,11 +31,11 @@
 	font-size: 0.8em;
 	color: black;
 	border: 2px solid black;
+	border-radius: 8px;
 	background-color: transparent;
 	padding: 20px;
 	padding-top: 10px;
 	padding-bottom: 10px;
-	border-radius: 0;
 	text-align: center;
 	font-size: 0.8em;
 	&:hover{
@@ -44,4 +44,8 @@
 		border: 2px solid $primary-color;
  		background-color: $primary-color;
   }
+}
+
+.btn_box{
+	border-radius: 0px;
 }

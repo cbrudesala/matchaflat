@@ -20,7 +20,8 @@ ActiveRecord::Schema.define(version: 20141201150949) do
     t.integer  "num_rooms"
     t.integer  "num_baths"
     t.boolean  "pet"
-    t.string   "address"
+    t.string   "area"
+    t.text     "flat_photo"
     t.datetime "created_at"
     t.datetime "updated_at"
     t.integer  "user_id"
@@ -49,7 +50,6 @@ ActiveRecord::Schema.define(version: 20141201150949) do
   create_table "users", force: true do |t|
     t.string   "name"
     t.string   "email"
-    t.string   "phone"
     t.string   "photo"
     t.datetime "created_at"
     t.datetime "updated_at"

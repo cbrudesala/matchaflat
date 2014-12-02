@@ -3,24 +3,27 @@
     <a href="/" class="hamb fleft"><img src="assets/hamburguer.png" alt="Hamburguer menu" class="hamb"></a>
   </div>
 
+  <div class="menu_right">
+    <%= link_to 'SIGNUP', new_user_path, class: "btn btn_box fright fri2" %>
+    <%= link_to 'LOGIN', new_user_path, class: "btn btn_box fright" %>
+  </div>
+</nav>
+
+<main>
+  <section class="intro">
   <div class="centrado">
     <a href="/" class="">
       <img src="assets/logo_roommate.png" alt="Logo Hotel" class="logo" >
     </a>
   </div>
-
-  <div class="menu_right">
-    <%= link_to 'SIGNUP', new_user_path, class: "btn fright fri2" %>
-    <%= link_to 'LOGIN', new_user_path, class: "btn fright" %>
-  </div>
-</nav>
-
-<main class="main_my">
-  <section class="intro">
-    <div class="circle vcenter">
-      <%= link_to 'FIND YOUR PERFECT ROOM', match_show_path, class: "btn vcenter" %>
-      <%= link_to 'FIND YOUR PERFECT RENTER', match_show_path, class: "btn vcenter" %>
+    <div class="vcenter m_auto intro_btn">
+      <%= link_to 'FIND YOUR PERFECT ROOM', match_show_path, class: "btn fleft" %>
+      <%= link_to 'FIND YOUR PERFECT RENTER', match_show_path, class: "btn fleft m_left" %>
     </div>
+    <p class= "scroll">SCROLL TO LEARN HOW IT WORKS </br>V</p>
   </section>
-  <p class= "scroll">SCROLL TO LEARN HOW IT WORKS </br>v</p>
+
+  <section class="how_works">
+    <p class= "vcenter"> HOW IT WORKS </p>
+  </section>
 </main>
