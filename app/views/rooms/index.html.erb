@@ -13,7 +13,7 @@
           Price: <strong><%= room.price %> €</strong>
         </p>
 
-        <%= link_to 'EDIT ROOM', edit_user_flat_room_path(@user_id, @flat.id, room.id), method: :delete, class: "btn btn_form margin_10 mb_10 width_180", data: { confirm: 'Are you sure' } %>
+        <%= link_to 'EDIT ROOM', edit_user_flat_room_path(@user_id, @flat.id, room.id), method: :delete, class: "btn btn_form margin_10 mb_10 width_180"%>
         <%= link_to 'DELETE ROOM', user_flat_room_path(@user_id, @flat.id, room.id), method: :delete, class: "btn btn_form margin_10 mb_10 width_180", data: { confirm: 'Are you sure' } %>
         </li>
       <% end %>

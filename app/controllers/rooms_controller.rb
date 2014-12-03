@@ -29,7 +29,7 @@ class RoomsController < ApplicationController
 
 	def edit
 		@user =  User.find params[:user_id]
-		@rooms = @flat.rooms
+		@room = @flat.rooms
 		render :layout => 'form'
 		# @room = Room.find params[:id]
 		# @user_id = params[:user_id]
