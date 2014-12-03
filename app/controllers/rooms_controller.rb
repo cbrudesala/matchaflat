@@ -28,9 +28,12 @@ class RoomsController < ApplicationController
 	end
 
 	def edit
-		@room = Room.find params[:id]
-		@user_id = params[:user_id]
-		@flat_id = params[:flat_id]
+		@user =  User.find params[:user_id]
+		@rooms = @flat.rooms
+		render :layout => 'form'
+		# @room = Room.find params[:id]
+		# @user_id = params[:user_id]
+		# @flat_id = params[:flat_id]
 	end
 
 	def update

@@ -3,6 +3,6 @@ class Room < ActiveRecord::Base
 
 	validates :price, presence: true
 
-	has_attached_file :room_photo, :styles => { :large => "120x120>", :medium => "48x48>", :thumb => "26x26>" }
+	has_attached_file :room_photo, :styles => { :large => "300x300>", :thumb => "100x100>" }
 	validates_attachment_content_type :room_photo, :content_type => /\Aimage\/.*\Z/
 end

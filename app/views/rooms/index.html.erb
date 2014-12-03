@@ -1,23 +1,24 @@
 <div>
-  <h2 class= "col-md-8 col-md-offset-2 bg_new_color arrow arrow-s desc"> Rooms list </h2>
+  <h2 class= "col-md-8 col-md-offset-2 bg_new_color arrow arrow-s desc"> Rooms list
+
+  </h2>
 
   <div class= "col-md-8 col-md-offset-2 bg_color">
-    <% if @flat.num_rooms > @flat.rooms.count %>
-      <%= link_to 'CREATE NEW ROOM', new_user_flat_room_path(@user_id, @flat.id) %>
-    <% end %>
-
     <ul>
       <% @rooms.each do |room| %>
-        <li class= "max_width rooms_list ml m_auto fleft">
+        <li class= "max_width rooms_list m_auto fleft txt_room mb m_room">
         <p>
           <%= image_tag room.room_photo.url(:large), class: "" %>
           </br>
-          Price: <strong><%= room.price %></strong>
+          Price: <strong><%= room.price %> €</strong>
         </p>
 
-        <%= link_to 'EDIT ROOM', edit_user_flat_room_path(@user_id, @flat.id, room.id), method: :delete, class: "btn btn_form margin_10 width_180", data: { confirm: 'Are you sure' } %>
-        <%= link_to 'DELETE ROOM', user_flat_room_path(@user_id, @flat.id, room.id), method: :delete, class: "btn btn_form margin_10 width_180", data: { confirm: 'Are you sure' } %>
+        <%= link_to 'EDIT ROOM', edit_user_flat_room_path(@user_id, @flat.id, room.id), method: :delete, class: "btn btn_form margin_10 mb_10 width_180", data: { confirm: 'Are you sure' } %>
+        <%= link_to 'DELETE ROOM', user_flat_room_path(@user_id, @flat.id, room.id), method: :delete, class: "btn btn_form margin_10 mb_10 width_180", data: { confirm: 'Are you sure' } %>
         </li>
+      <% end %>
+      <% if @flat.num_rooms > @flat.rooms.count %>
+        <%= link_to '+ CREATE NEW ROOM', new_user_flat_room_path(@user_id, @flat.id), class: "btn btn_form margin_10 width_180 m_auto m_room vcenter" %>
       <% end %>
     </ul>
   </div>
