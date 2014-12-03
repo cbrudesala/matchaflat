@@ -35,6 +35,7 @@ class FlatsController < ApplicationController
 	def edit
 		@user =  User.find params[:user_id]
 		@flat = @user.flat
+		render :layout => 'form'
 	end
 
 	def update
