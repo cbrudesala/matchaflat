@@ -1,7 +1,7 @@
 @import "variables";
 
 .bg_new_color {
-	background-color: $primary-color;
+	background-color: $secondary-color;
 	border-radius: 10px 10px 0 0;
 	padding: 8px;
 }
@@ -29,6 +29,9 @@
 	left: 50%;
 	margin-left: -14.5px;
 	border: 15px solid transparent;
-	border-top-color: $primary-color;
+	border-top-color: $secondary-color;
 }
+
+
+
 

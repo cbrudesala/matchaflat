@@ -22,16 +22,33 @@
 	margin-bottom: 20px;
 }
 
+.mb_10{
+	margin-bottom: 6px;
+}
+
+.width_202{
+	min-width: 212px;
+}
+
 .visible{
 	display: block;
 }
 
+.txt_center{
+	text-align: center;
+}
+
+ul, li {
+ list-style-type: none;
+}
+
 .btn{
+	letter-spacing: 1px;
 	text-decoration: none;
 	font-size: 0.8em;
 	color: black;
-	border: 2px solid black;
-	border-radius: 8px;
+	border: 1px solid black;
+	border-radius: 5px;
 	background-color: transparent;
 	padding: 20px;
 	padding-top: 10px;
@@ -39,13 +56,28 @@
 	text-align: center;
 	font-size: 0.8em;
 	&:hover{
-		color: white;
+		color: #A16772;
 		text-decoration: none;
-		border: 2px solid $primary-color;
+		border: 1px solid white;
  		background-color: $primary-color;
   }
 }
 
 .btn_box{
 	border-radius: 0px;
+}
+
+.btn_form{
+	color: white;
+	background-color: $success-color;
+	border: 1px solid $success-color;
+	&:hover{
+		color: white;
+		background-color: $info-color;
+		border: 1px solid $info-color;
+  }
+}
+
+p{
+	color: black;
 }

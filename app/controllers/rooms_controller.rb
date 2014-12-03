@@ -3,6 +3,7 @@ class RoomsController < ApplicationController
 		@user_id = params[:user_id]
 		@flat =  Flat.find params[:flat_id]
 		@rooms = @flat.rooms
+		render :layout => 'form'
 	end
 
 	def new

@@ -1,28 +1,18 @@
 <h2 class= "col-md-3 col-md-offset-5 bg_new_color arrow arrow-s desc">
 	User information
 </h2>
-<div class="col-md-3 col-md-offset-5 bg_color">
-	<ul> <%= image_tag @user.avatar.url(:medium), class: "img-circle" %>
+<div class="col-md-3 col-md-offset-5 bg_color txt_center">
+	<ul> <%= image_tag @user.avatar.url(:large), class: "img-circle mb_10" %>
 		<li>Name: <strong><%= @user.name %></strong> </li>
 		<li>Email: <strong><%= @user.email %></strong> </li>
 	</ul>
 
 	<div class="opciones">
-		</br>
-		<%= link_to 'edit user', edit_user_path(@user.id), class: "links btn scroll vcenter" %>
-		</br>
-		</br>
-		<%= link_to 'CREATE YOUR PERFECT FLAT', new_user_flat_path(@user.id), class: "links btn scroll vcenter" %>
-		</br>
-		
-
+		<%= link_to 'EDIT USER', edit_user_path(@user.id), class: "btn btn_form mb_10 width_202" %>
+		<%= link_to 'CREATE A FLAT', new_user_flat_path(@user.id), class: "btn btn_form mb_10 width_202" %>
 		<% if @user.flat %>
-		</br>
-			<%= link_to 'SEE YOUR FLAT', user_flat_path(@user.id, @user.flat.id), class: "links btn scroll vcenter" %>
-			</br>
+			<%= link_to 'SEE YOUR FLAT', user_flat_path(@user.id, @user.flat.id), class: "btn btn_form mb_10 width_202" %>
 		<%end%>
-		
-		</br>
-		<%= link_to 'FIND YOUR MATCH', match_show_path, class: "links btn scroll vcenter" %>
+		<%= link_to 'FIND YOUR MATCH', match_show_path, class: "btn btn_form mb width_202" %>
 	</div>
 </div>

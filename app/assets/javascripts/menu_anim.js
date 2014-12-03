@@ -5,7 +5,7 @@ $(document).ready(function () {
     $( window ).scroll(function() {
       if(window.scrollY > $('section').height()){
         $('nav').addClass('nav_bg');
-        $('.centrado').fadeIn(1200);
+        $('.centrado').fadeIn(200);
       }
       if(window.scrollY < $('section').height()){
         $('.centrado').hide();

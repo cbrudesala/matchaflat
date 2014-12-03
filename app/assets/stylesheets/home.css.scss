@@ -27,7 +27,7 @@
 }
 
 .fri2{
-	margin-left: -2px;
+	margin-left: -1px;
 }
 
 .menu_right{
@@ -85,6 +85,12 @@
 	transform: translateY(-50%);
 }
 
+.center_intro{
+	position: relative;
+	top: 30%;
+	transform: translateY(-30%);
+}
+
 .centrado{
 	margin-left: -125px;
 	left: 50%;
@@ -113,4 +119,18 @@ html, body, main {
 }
 .m_left{
 	margin-left: 20px;
+}
+
+.subtitle{
+	margin-top: 30px;
+}
+
+.intro_bg{
+  background: url(img_intro2.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  z-index: -1;
 }

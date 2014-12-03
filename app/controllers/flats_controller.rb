@@ -33,7 +33,8 @@ class FlatsController < ApplicationController
 	end
 
 	def edit
-		@flat = Flat.find params[:id]
+		@user =  User.find params[:user_id]
+		@flat = @user.flat
 	end
 
 	def update

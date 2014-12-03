@@ -2,18 +2,17 @@
 	Flat information
 </h2>
 
-<div class=" col-md-3 col-md-offset-5 bg_color contenido">
+<div class=" col-md-3 col-md-offset-5 bg_color contenido ">
 	<ul>
-
 		<li>Rooms number: <strong><%= @flat.num_rooms %></strong> </li>
 		<li>Baths number: <strong><%= @flat.num_baths %></strong> </li>
 		<li>Pets: <strong><%= @flat.pet %></strong> </li>
 		<li>Area: <strong><%= @flat.area %></strong> </li>
 	</ul>
 
-	<%= link_to 'edit flat', edit_user_flat_path(@user.id, @flat.id), class: "links butt scroll vcenter" %>
-	<%= link_to 'delete flat', user_flat_path(@user.id, @flat), method: :delete, class: "links butt scroll vcenter btn-danger", confirm: "Are you sure?" %>
-	<%= link_to 'create a ROOM', new_user_flat_room_path(@user.id, @flat.id), class: "links butt scroll vcenter" %>
-	</br>
-	</br>
+	<div class="opciones">
+		<%= link_to 'EDIT FLAT', edit_user_flat_path(@user.id, @flat.id), class: "btn btn_form mb_10 width_202" %>
+		<%= link_to 'CREATE A ROOM', new_user_flat_room_path(@user.id, @flat.id), class: "btn btn_form mb_10 width_202" %>
+		<%= link_to 'DELETE FLAT', user_flat_path(@user.id, @flat), method: :delete, class: "btn btn_form mb width_202 btn-danger", confirm: "Are you sure?" %>
+	</div>
 </div>
