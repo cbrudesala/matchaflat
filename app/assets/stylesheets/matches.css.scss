@@ -1,3 +1,23 @@
 // Place all the styles related to the Matches controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+@import "variables";
+
+.bg_img_match{
+  background: url(bg-match.png) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height: 100%;
+  z-index: -1;
+}
+
+.match{
+  background-color: $secondary-color;
+  width: 100%;
+  height: 100%;
+  text-align: center;
+}
+

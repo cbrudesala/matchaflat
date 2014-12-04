@@ -18,6 +18,7 @@
 @import "bootstrap";
 @import "variables";
 
+
 .padding0{
   padding: 0;
 }
@@ -118,4 +119,28 @@ p{
 
 .padding_sides{
   padding: 10px 28px;
+}
+
+.porcentaje{
+  font-size: 70px;
+}
+
+.top-arrow{
+  top: 137px;
+}
+.match{
+  color: white;
+  font-size: 1em;
+}
+
+.bg-white{
+  background-color: white;
+}
+
+.btn_intro2{
+  border: 1px solid white;
+  color: white;
+  &:hover{
+    color: black;
+  }
 }
