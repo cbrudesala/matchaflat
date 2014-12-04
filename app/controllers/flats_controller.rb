@@ -2,9 +2,6 @@ class FlatsController < ApplicationController
 	def index
 		@user =  User.find params[:user_id]
 		@flat = @user.flat
-		puts '='*50
-		puts @flat
-		puts '='*50
 	end
 
 	def new

@@ -1,5 +1,6 @@
 class User < ActiveRecord::Base
 	has_one :flat
+  has_many :matches
 
 	validates :name, presence: true
 	validates :email, presence: true

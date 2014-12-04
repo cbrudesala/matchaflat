@@ -1,8 +1,8 @@
-<h2 class= "col-md-3 col-md-offset-5 bg_new_color arrow arrow-s desc">
+<h2 class= "bg_new_color arrow arrow-s desc">
 	Flat information
 </h2>
 
-<div class=" col-md-3 col-md-offset-5 bg_color contenido ">
+<div class="bg_color padd_20">
 	<ul>
 		<li>Rooms number: <strong><%= @flat.num_rooms %></strong> </li>
 		<li>Baths number: <strong><%= @flat.num_baths %></strong> </li>
@@ -13,6 +13,6 @@
 	<div class="opciones">
 		<%= link_to 'EDIT FLAT', edit_user_flat_path(@user.id, @flat.id), class: "btn btn_form mb_10 width_202" %>
 		<%= link_to 'CREATE A ROOM', new_user_flat_room_path(@user.id, @flat.id), class: "btn btn_form mb_10 width_202" %>
-		<%= link_to 'DELETE FLAT', user_flat_path(@user.id, @flat), method: :delete, class: "btn btn_form mb width_202 btn-danger", confirm: "Are you sure?" %>
+		<%= link_to 'DELETE FLAT', user_flat_path(@user.id, @flat), method: :delete, class: "btn btn_form width_202 btn-danger", confirm: "Are you sure?" %>
 	</div>
 </div>

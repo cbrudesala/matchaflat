@@ -1,4 +1,4 @@
-<div class= "col-md-3 col-md-offset-5 bg_color">
+<div class= "bg_color padd_20">
 
 	<%= form_for [@user, @flat] do |f| %>
 		<%= f.hidden_field :user_id, :value => @user.id %>
@@ -7,20 +7,20 @@
 		<%= f.file_field :flat_photo, class: "form-control" %>
 		<br />
 		<%= f.label :num_rooms %>
-		<%= f.number_field :num_rooms, class: "form-control", in: 1..6, step:1  %>
+		<%= f.number_field :num_rooms, placeholder: 'Write number of rooms', class: "form-control", in: 1..6, step:1  %>
 		<br />
 		<%= f.label :num_baths %>
-		<%= f.number_field :num_baths, class: "form-control", in: 1..6, step:1  %>
+		<%= f.number_field :num_baths, placeholder: 'Write number of baths', class: "form-control", in: 1..6, step:1  %>
 		<br />
 		<%= f.label :pet %>
 		<br/>
-		<%= f.radio_button(:pet, 'true') %> I accept pets
-		<%= f.radio_button(:pet, 'false') %> I don't accept pets
+		<%= f.radio_button(:pet, 'true') %>  Accepted!
+		<%= f.radio_button(:pet, 'false') %>  Not accepted!
 		<br/>
 		<br/>
 		<%= f.label :area %>
 		<%= f.select :area, ['Eixample', 'Sants', 'Poble Nou', 'Gràcia', 'Raval', 'Gotic', 'Sarria', 'Barceloneta'], {}, {:class => 'form-control mtop'}%>
 		<br/>
-		<%= f.submit 'SAVE', class: "btn btn_form btn-lg btn-block mb" %>
+		<%= f.submit 'SAVE', class: "btn btn_form btn-lg btn-block" %>
 	<% end %>
 </div>

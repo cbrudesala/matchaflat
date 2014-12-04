@@ -3,7 +3,7 @@ class RoomsController < ApplicationController
 		@user_id = params[:user_id]
 		@flat =  Flat.find params[:flat_id]
 		@rooms = @flat.rooms
-		render :layout => 'form'
+		render :layout => 'center_content'
 	end
 
 	def new
@@ -28,21 +28,21 @@ class RoomsController < ApplicationController
 	end
 
 	def edit
-		@user =  User.find params[:user_id]
-		@room = @flat.rooms
-		render :layout => 'form'
-		# @room = Room.find params[:id]
-		# @user_id = params[:user_id]
-		# @flat_id = params[:flat_id]
+    @user =  User.find params[:user_id]
+    @flat =  Flat.find params[:flat_id]
+    @room = Room.find params[:id]
+    render :layout => 'form'
 	end
 
 	def update
+		user_id = params[:user_id]
+		flat_id = params[:flat_id]
 		@room = Room.find params[:id]
 
 		if @room.update_attributes room_params
-			redirect_to action: :show, controller: :rooms, id: @room.id
+			redirect_to user_flat_rooms_path(user_id, flat_id)
 		else
-			render 'room'
+			render 'edit'
 		end
 	end
 

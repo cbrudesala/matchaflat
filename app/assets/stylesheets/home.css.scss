@@ -1,7 +1,11 @@
-// .main_my{
-// 	max-height: 800px;
+.font{
+	font-size: 0.55em !important;
+}
 
-// }
+.pad_0{
+	padding: 0;
+	margin: 0;
+}
 
 .links{
 	text-decoration: none;
@@ -91,11 +95,24 @@
 	transform: translateY(-30%);
 }
 
+.center_form{
+	position: relative;
+	top: 10%;
+	transform: translateY(-10%);
+}
+
 .centrado{
 	margin-left: -125px;
 	left: 50%;
 	position: absolute;
 	display: none;
+}
+
+.centrado-form{
+	margin-left: -125px;
+	left: 50%;
+	position: absolute;
+	display: block;
 }
 
 .scroll{
@@ -115,13 +132,17 @@ html, body, main {
 }
 
 .intro_btn{
-	width: 418px;
+	width: 460px;
 }
 .m_left{
 	margin-left: 20px;
 }
 .m_right{
 	margin-right: 20px;
+}
+
+.m_right10{
+	margin-right: 10px;
 }
 
 .subtitle{

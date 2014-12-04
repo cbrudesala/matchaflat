@@ -4,12 +4,12 @@ $(document).ready(function () {
    */
     $( window ).scroll(function() {
       if(window.scrollY > $('section').height()){
-        $('nav').addClass('nav_bg');
+        $('.nav-home').addClass('nav_bg');
         $('.centrado').fadeIn(200);
       }
       if(window.scrollY < $('section').height()){
         $('.centrado').hide();
-        $('nav').removeClass('nav_bg');
+        $('.nav-home').removeClass('nav_bg');
       }
     });
 })

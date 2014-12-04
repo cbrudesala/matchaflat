@@ -25,9 +25,12 @@ class MatchesController < ApplicationController
     if params[:area]
       @results = @results.where(area: params[:area])
     end
-    
+
     # for each result shown calculate its percentage
-    render 'show_results'
+    render 'show'
+  end
+
+  def show
   end
 
 end

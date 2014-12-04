@@ -1,0 +1,54 @@
+@import "variables";
+
+.each_room{
+  border: 1px solid black;
+  border-radius: 10px;
+}
+
+.absolute{
+  position: absolute;
+  top: 33px;
+  right: -2px;
+}
+
+.relative{
+  position: relative;
+  top: 100px;
+}
+
+.width{
+  max-width: 300px;
+  min-width: 300px;
+}
+
+.width280{
+  width: 280px;
+}
+
+.margin20{
+  margin: 20px;
+}
+
+.padding0{
+  padding: 0;
+}
+.padding-top10{
+  padding-top:10px;
+}
+
+.margin_left10{
+  margin-left: 10px;
+}
+
+.room_img{
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  margin: 0;
+  margin-left: 10px;
+  width:280px;
+  height: 179px;
+  z-index: -1;
+  text-align:center;
+}

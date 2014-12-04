@@ -18,6 +18,18 @@
 @import "bootstrap";
 @import "variables";
 
+.padding0{
+  padding: 0;
+}
+
+.dis-block{
+	display: block;
+}
+
+.bg-white{
+	background: white;
+}
+
 .mb{
 	margin-bottom: 20px;
 }
@@ -47,7 +59,6 @@ ul, li {
 	text-decoration: none;
 	font-size: 0.8em;
 	color: black;
- 
 	background-color: transparent;
 	padding: 20px;
 	padding-top: 10px;
@@ -66,6 +77,10 @@ ul, li {
 	border-radius: 0px;
 }
 
+.btn_intro{
+	border: 1px solid black;
+}
+
 .btn_form{
 	color: white;
 	background-color: $success-color;
@@ -79,4 +94,28 @@ ul, li {
 
 p{
 	color: black;
+}
+.row-centered {
+    text-align:center;
+}
+.col-centered {
+    display:inline-block;
+    float:none;
+    /* reset the text-align */
+    text-align:left;
+    /* inline-block space fix */
+    margin-right:-4px;
+}
+
+.bg_create{
+  color: white;
+  border: 1px solid white;
+  &:hover{
+    color: $secondary-color;
+    background-color: white;
+  }
+}
+
+.padding_sides{
+  padding: 10px 28px;
 }

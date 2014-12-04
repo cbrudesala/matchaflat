@@ -1,7 +1,7 @@
-<h2 class= "col-md-3 col-md-offset-5 bg_new_color arrow arrow-s desc">
+<h2 class= "bg_new_color arrow arrow-s desc">
 	User information
 </h2>
-<div class="col-md-3 col-md-offset-5 bg_color txt_center">
+<div class="bg_color padd_20">
 	<ul> <%= image_tag @user.avatar.url(:large), class: "img-circle mb_10" %>
 		<li>Name: <strong><%= @user.name %></strong> </li>
 		<li>Email: <strong><%= @user.email %></strong> </li>
@@ -13,6 +13,6 @@
 		<% if @user.flat %>
 			<%= link_to 'SEE YOUR FLAT', user_flat_path(@user.id, @user.flat.id), class: "btn btn_form mb_10 width_202" %>
 		<%end%>
-		<%= link_to 'FIND YOUR MATCH', match_show_path, class: "btn btn_form mb width_202" %>
+		<%= link_to 'FIND YOUR MATCH', match_show_path, class: "btn btn_form width_202" %>
 	</div>
 </div>

@@ -1,13 +1,13 @@
-<div class= "col-md-3 col-md-offset-5 bg_color">
+<div class= "bg_color padd_20">
 	<%= form_for [@user, @flat, @room] do |f| %>
 		<%= f.hidden_field :flat_id, :value => @flat.id %>
 
 		<%= f.label :room_photo %> (optinal)
-		<%= f.file_field :room_photo%>
+		<%= f.file_field :room_photo, class: "form-control" %>
 		<br />
 		<%= f.label :price %>
 		<%= f.number_field :price, class: "form-control mb",  step: 10 %>
 
-		<%= f.submit 'SAVE', class: "btn btn_form btn-lg btn-block mb" %>
+		<%= f.submit 'SAVE', class: "btn btn_form btn-lg btn-block" %>
 	<% end %>
 </div>

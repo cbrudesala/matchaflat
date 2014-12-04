@@ -1,4 +1,4 @@
-<nav class="nav-general">
+<nav class="nav-general nav-home">
   <div class="ml">
     <a href="/" class="hamb fleft"><img src="assets/hamburguer.png" alt="Hamburguer menu" class="hamb"></a>
   </div>
@@ -9,8 +9,8 @@
   </div>
 
   <div class="menu_right">
-    <%= link_to 'SIGNUP', new_user_path, class: "btn btn_box fright fri2" %>
-    <%= link_to 'LOGIN', new_user_path, class: "btn btn_box fright" %>
+    <%= link_to 'SIGNUP', new_user_path, class: "btn btn_box  btn_intro fright fri2" %>
+    <%= link_to 'LOGIN', new_user_path, class: "btn btn_box btn_intro fright" %>
   </div>
 </nav>
 
@@ -18,10 +18,10 @@
   <section class="intro intro_bg">
     <div class="center_intro">
       <img src="assets/logo_roommate.png" alt="Logo Hotel" class="logo" >
-      <p class="subtitle">A new way to find an apartment that perfectly matches with you!</p>
+      <p class="subtitle">A new way to find an apartment that perfectly matches with you! Try it!</p>
       <div class="m_auto intro_btn">
-        <%= link_to 'FIND YOUR PERFECT ROOM', match_show_path, class: "btn fleft" %>
-        <%= link_to 'FIND YOUR PERFECT RENTER', match_show_path, class: "btn fleft m_left" %>
+        <%= link_to 'FIND YOUR PERFECT ROOM', match_show_path, class: "btn btn_intro fleft" %>
+        <%= link_to 'FIND YOUR PERFECT RENTER', match_show_path, class: "btn  btn_intro fleft m_left" %>
       </div>
     </div>
     <p class= "scroll">SCROLL TO LEARN HOW IT WORKS </br>V</p>

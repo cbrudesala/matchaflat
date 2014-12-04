@@ -8,7 +8,7 @@
 
 .desc{
 	color: white;
-	margin-bottom: -24px;
+	margin-bottom: 0;
 	z-index: 1;
 	font-size: 20px;
 	padding: 20px;
@@ -25,7 +25,7 @@
 }
 
 .arrow-s:before {
-	bottom: -28px;
+	top: 81px;
 	left: 50%;
 	margin-left: -14.5px;
 	border: 15px solid transparent;

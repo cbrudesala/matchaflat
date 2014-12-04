@@ -10,7 +10,7 @@ Rails.application.routes.draw do
     end
   end
 
-  get '/match/show' => 'match#show'
+  get '/match/show' => 'matches#show'
 
 
   # The priority is based upon order of creation: first created -> highest priority.

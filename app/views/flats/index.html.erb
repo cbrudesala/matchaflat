@@ -1,19 +1,21 @@
-<h2 class= "col-md-3 col-md-offset-5 bg_new_color arrow arrow-s desc">
-	Flats list
-</h2>
+<div class= "center_form">
+	<h2 class= "col-md-3 col-md-offset-5 bg_new_color arrow arrow-s desc">
+		Flats list
+	</h2>
 
-<div class=" col-md-3 col-md-offset-5 bg_color contenido">
-	<ul>
-		<li>
-			<%= @flat.flat_photo %>
-			<%= @flat.num_rooms %>
-			<%= @flat.num_baths %>
-			<%= @flat.pet %>
-			<%= @flat.area %>
-		</li>
-	</ul>
+	<div class=" col-md-3 col-md-offset-5 bg_color contenido">
+		<ul>
+			<li>
+				<%= @flat.flat_photo %>
+				<%= @flat.num_rooms %>
+				<%= @flat.num_baths %>
+				<%= @flat.pet %>
+				<%= @flat.area %>
+			</li>
+		</ul>
 
-	<%= link_to('Delete', user_flat_path(@user.id, @flat), method: :delete, data: { confirm: 'Are you sure' }) %>
-	<br/>
-	<%= link_to 'new room', new_user_flat_room_path(@user.id, @flat) %>
+		<%= link_to('Delete', user_flat_path(@user.id, @flat), method: :delete, data: { confirm: 'Are you sure' }) %>
+		<br/>
+		<%= link_to 'new room', new_user_flat_room_path(@user.id, @flat) %>
+	</div>
 </div>

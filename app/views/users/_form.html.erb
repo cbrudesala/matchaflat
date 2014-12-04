@@ -1,12 +1,12 @@
-<div class= "col-md-3 col-md-offset-5 bg_color">
-	<%= form_for @user do |f| %>
-		<%= f.text_field :name, placeholder: 'Write your Name' , class: "form-control" %>
-		<br />
-		<%= f.text_field :email, placeholder: 'Write your Email' ,class: "form-control" %>
-		<br />
-		<%= f.label :avatar %> (optinal)
-		<%= f.file_field :avatar, class: "form-control" %>
-		<br />
-		<%= f.submit 'SIGN UP', class: "btn btn_form btn-lg btn-block mb" %>
-	<% end %>
+<div class= "bg_color padd_20">
+  <%= form_for @user do |f| %>
+    <%= f.text_field :name, placeholder: 'Write your Name' , class: "form-control" %>
+    <br />
+    <%= f.text_field :email, placeholder: 'Write your Email' ,class: "form-control" %>
+    <br />
+    <%= f.label :avatar %> (optinal)
+    <%= f.file_field :avatar, class: "form-control" %>
+    <br />
+    <%= f.submit 'SIGN UP', class: "btn btn_form btn-lg btn-block" %>
+  <% end %>
 </div>

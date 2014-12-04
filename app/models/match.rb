@@ -4,6 +4,6 @@ class Match
 
   attr_accessor :percentage, :user_id, :room_id
 
-
+  belongs_to :user
 
 end
